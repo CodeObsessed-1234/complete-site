@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Edu+VIC+WA+NT+Beginner&family=Kanit&family=Lobster&family=Permanent+Marker&family=Rubik+Beastly&family=Rubik:wght@300&family=Secular+One&family=Square+Peg&family=Ubuntu:ital,wght@1,300&display=swap"
+    rel="stylesheet">
+  <title>Construction</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      overflow: auto;
+    }
+
+    .main {
+      width: 100vw;
+      height: fit-content;
+      position: absolute;
+      top: 0%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      z-index: 4;
+      /* position: static;
+  background-image: url("https://media.tenor.com/PmVJW13IiEEAAAAd/construction-boss.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+    }
+
+    #img {
+      position: fixed;
+      min-width: 100vw;
+      min-height: 100vh;
+      z-index: 3;
+    }
+
+    #logo {
+      width: 80px;
+      padding-right: 20px;
+      height: auto;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+    }
+
+    .head a {
+      text-decoration: none;
+      color: aliceblue;
+    }
+
+    .head {
+      display: flex;
+      z-index: 5;
+      position: fixed;
+      min-width: 100vw;
+      height: fit-content;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      color: aliceblue;
+      border-bottom: 2px solid white;
+      align-items: center;
+      background-color: rgb(30, 27, 27);
+    }
+
+    .companyName {
+      display: flex;
+      font-size: 10px;
+      background-color: rgb(200, 194, 17);
+      color: black;
+    }
+
+    .headingContent {
+      display: flex;
+      font-size: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .headingContent h2:hover {
+
+      box-shadow: 10px 10px 60px 10px rgb(255, 255, 255);
+    }
+
+    .headingContent h2 {
+      padding: 0px 10px;
+    }
+
+    .link {
+      cursor: pointer;
+    }
+
+    .makeScroll {
+      text-align: center;
+      width: 100vw;
+      height: 60vh;
+      word-spacing: 10px;
+      font-size: 30px;
+      color: rgba(39, 38, 38, 0.856);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .makeScroll h1 {
+
+      padding: 0px 30px;
+    }
+
+    .intro {
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
+      min-width: 100vw;
+      /* margin-bottom: 15vh; */
+    }
+
+    .intro h1 {
+      width: inherit;
+
+    }
+
+    .intro span {
+      font-size: 25px;
+      margin-left: 20px;
+      margin-top: 50px;
+      cursor: pointer;
+      background-color: rgb(60, 22, 95);
+      padding: 10px 20px;
+      color: aliceblue;
+      border-radius: 20px;
+      border: 2px solid white;
+    }
+
+    .intro span:hover {
+      transform: scale(1.1, 1.1);
+      box-shadow: 10px 10px 80px 10px rgb(255, 255, 255);
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      min-width: 100vw;
+      justify-content: center;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      align-items: center;
+      background-color: aliceblue;
+
+    }
+
+    .services h1 {
+      padding-top: 20px;
+    }
+
+    #serviesHeading {
+      border-bottom: 10px solid rgb(255, 238, 0);
+      margin-bottom: 20px;
+
+    }
+
+    .typesOfServies {
+      max-width: fit-content;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+
+    .serviceImage {
+      width: 300px;
+    }
+
+    .service {
+      max-width: 300px;
+      background-color: gainsboro;
+      margin-left: 30px;
+      padding: 20px 30px;
+      margin-top: 20px;
+
+    }
+
+    .service:hover {
+      transform: scale(1.1, 1.1);
+      box-shadow: 10px 10px 80px 10px rgb(77, 77, 77);
+    }
+
+    .about {
+      background-color: rgb(30, 27, 27);
+      display: flex;
+      min-width: 100vw;
+      /* flex-wrap: wrap; */
+      justify-content: space-around;
+      min-height: 100vh;
+    }
+
+
+    .content {
+      display: flex;
+      color: aliceblue;
+      flex-direction: column;
+      min-width: fit-content;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      /* background-color: antiquewhite;   */
+    }
+
+    .content h1 {
+      padding: 20px 0px;
+      width: fit-content;
+
+      border-bottom: 10px solid rgb(255, 238, 0);
+    }
+
+    .content p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
+      width: fit-content;
+      flex-wrap: wrap;
+      padding: 20px 80px;
+      text-align: center;
+    }
+
+
+
+    @keyframes down {
+      0% {
+        transform: scale(1.1, 0.2);
+      }
+    }
+
+    #downArrow:hover {
+      cursor: pointer;
+    }
+
+    #top {
+      bottom: 2%;
+      position: fixed;
+      right: 1%;
+      font-size: 25px;
+      font-weight: bolder;
+      background-color: rgba(249, 249, 249, 0.426);
+      border-radius: 20px;
+      padding: 10px 20px;
+      color: rgb(22, 16, 16);
+    }
+
+    .achievements {
+      background-color: rgb(214, 214, 49);
+      color: rgb(0, 0, 115);
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 100vw;
+      height: fit-content;
+
+      justify-content: space-evenly;
+    }
+
+    .achievement {
+      margin-top: 20px;
+      padding: 10px 20px;
+      display: flex;
+      margin-right: 20px;
+      border-radius: 20px;
+      border-right: 6px solid rgb(255, 255, 255);
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      justify-items: center;
+    }
+
+    .achievement h1 {
+      font-size: 70px;
+    }
+
+    .achievement p {
+      font-size: 30px;
+    }
+
+    .achievement:hover {
+      border-bottom: 5px solid white;
+
+    }
+
+    .projects {
+      padding-top: 50px;
+      min-width: 100vw;
+      min-height: 100vh;
+      text-align: center;
+      background-color: aliceblue;
+    }
+
+    .projectHeading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .projectHeading h1 {
+      padding-top: 40px;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      border-bottom: 8px solid yellow;
+    }
+
+    .projectImage {
+      width: 500px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 80px 0px black;
+      height: 500px;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+
+    .projectsImage {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .projImage {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+
+    .projectImage:hover {
+      opacity: 0.5;
+      transform: rotate3d(5, 5, 5, 7deg)
+    }
+
+    .contact {
+      color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0px;
+      flex-wrap: wrap;
+      align-items: center;
+      min-width: 100vw;
+      min-height: 100vh;
+      background-color: rgb(22, 25, 25);
+    }
+
+    .contactHeading h1 {
+      padding-top: 50px;
+
+      border-bottom: 7px solid yellow;
+      font-size: 40px;
+    }
+
+    .contactDetails {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      justify-content: center;
+      /* align-items: center; */
+    }
+
+    .inquiries h1 {
+
+      border-bottom: 6px solid white;
+      margin-bottom: 20px;
+    }
+
+    .headOffice h1 {
+
+      border-bottom: 6px solid white;
+      margin-bottom: 20px;
+    }
+
+    .contactUs h1 {
+
+      border-bottom: 6px solid white;
+      margin-bottom: 20px;
+    }
+
+    .employment h1 {
+
+      border-bottom: 6px solid white;
+      margin-bottom: 20px;
+    }
+
+    .inquiries {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+      margin-right: 30px;
+      width: 40%;
+      margin-top: 10px;
+
+    }
+
+    .headOffice {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      margin-top: 10px;
+      margin-right: 50px;
+    }
+
+    .contactUs {
+      margin-top: 30px;
+      display: flex;
+      width: fit-content;
+      /* border: 2px solid white; */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      align-items: center;
+    }
+
+    .employment {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40%;
+      align-items: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .contactDetails {
+      display: flex;
+    }
+
+    .contact p {
+      font-size: 25px;
+    }
+
+    .details {
+
+      border-radius: 10px;
+      width: 500px;
+      height: 50px;
+      margin: 20px 0px;
+    }
+
+    #submit {
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 20px;
+      color: aliceblue;
+      float: right;
+      cursor: pointer;
+      margin-top: 20px;
+      border: 2px solid white;
+      background-color: rgb(75, 89, 84);
+    }
+
+    @media only screen and (max-width:646px) {
+      .makeScroll h1 {
+        border-left-width: 0px;
+        border-right-width: 0px;
+      }
+
+      .makeScroll h1 {
+        font-size: larger;
+        min-width: 100vw;
+      }
+
+    }
+
+    @media only screen and (max-width:351px) {
+      .makeScroll {
+        padding-top: 40px;
+      }
+    }
+
+    @media only screen and(max-width:434px) {
+      .projImage {
+        width: 100px;
+        height: auto;
+      }
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+
+  <div class="image">
+    <img src="https://mefps-sg.com/images/con3.gif" alt="" id="img">
+  </div>
+
+
+  <div class="main">
+    <div class="head">
+      <div class="companyName link" onclick="moveTop()">
+        <img
+          src="https://png.pngtree.com/template/20191014/ourmid/pngtree-building-and-construction-logo-design-template-image_317780.jpg"
+          alt="" id="logo">
+        <h1>Nitin's <br> Construction LTD</h1>
+      </div>
+      <div class="headingContent">
+        <h2 class="link" onclick="moveTop()">HOME</h2>
+        <h2 class="link" onclick="toServies()">SERVICES</h2>
+        <h2 class="link" onclick="toAbout()">ABOUT</h2>
+        <h2 class="link" onclick="toProject()">PROJECTS</h2>
+        <h2 class="link" onclick="toContact()">CONTACT</h2>
+        <a href="./plans.html"><h2 class="link">Plans</h2></a>
+        <a href="../public/login.html">
+          <h2 class="link">{{login}}</h2>
+        </a>
+        <h2 class="link">
+          <i class='fas fa-id-card' style='font-size:36px; color:aliceblue;'></i><br> {{channelName}}
+        </h2>
+      </div>
+    </div>
+
+
+    <div class="intro" id="entry">
+      <div class="makeScroll">
+        <h1>{{headingIntro1}} <br> {{headingIntro2}} &#128512;</h1>
+      </div>
+      <span id="downArrow" onclick="moveDown()">Know More</span>
+      <!-- <h1 id="downArrow" onclick="moveDown()">↓</h1> -->
+    </div>
+
+
+    <div class="services" id="idServices">
+      <h1 id="serviesHeading">SERVICES</h1>
+      <div class="typesOfServies">
+        <div class="service">
+          <img
+            src="https://static.wixstatic.com/media/c19c76_22d8ec47d1484b09a9c333e4141a12a0.jpg/v1/fill/w_375,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c19c76_22d8ec47d1484b09a9c333e4141a12a0.jpg"
+            alt="" class="serviceImage">
+          <h1>
+            Preconstruction <br>Planning</h1>
+          <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+            click me to add your own content and make changes to the font.</p>
+         
+        </div>
+        <div class="service">
+          <img
+            src="https://static.wixstatic.com/media/b31d0e84cb714761b2b1f06c305023c7.jpg/v1/fill/w_375,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/b31d0e84cb714761b2b1f06c305023c7.jpg"
+            alt="" class="serviceImage">
+          <h1>Preconstruction <br>Planning</h1>
+          <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+            click me to add your own content and make changes to the font.</p>
+      
+        </div>
+        <div class="service">
+          <img
+            src="https://static.wixstatic.com/media/9e456adff0ee4a2c847cfd67a62454a3.jpg/v1/fill/w_375,h_281,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/9e456adff0ee4a2c847cfd67a62454a3.jpg"
+            alt="" class="serviceImage">
+          <h1>Preconstruction <br>Planning</h1>
+          <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+            click me to add your own content and make changes to the font.</p>
+           
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="about" id="idAbout">
+      <div class="content">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi necessitatibus optio blanditiis distinctio inventore, assumenda corporis odio! Numquam nam quasi, dolor vitae itaque eos soluta facere nulla quam velit maiores tempore omnis qui est, ipsum atque ea expedita assumenda maxime facilis ipsam ipsa excepturi corrupti. Commodi porro repudiandae inventore alias a, enim at provident nesciunt placeat asperiores qui temporibus impedit voluptatum est animi dignissimos, beatae repellat dolor eveniet praesentium illo in! Quaerat doloremque, eos saepe unde enim optio inventore repellat doloribus quo tenetur ex perspiciatis deleniti quos. Placeat voluptatibus vitae, aperiam nulla iusto tempora recusandae reiciendis. Aliquam quam cupiditate iure facere tempore nostrum asperiores sequi ut soluta quasi mollitia officiis iusto veritatis commodi dolorem omnis voluptatum, est ad animi numquam corporis aut blanditiis repellat? Dolor sint amet, ea asperiores natus itaque quibusdam odio necessitatibus adipisci rem ipsa modi, optio laudantium exercitationem est impedit quae incidunt molestias distinctio numquam et debitis aspernatur. Ipsam cum, culpa quis vel cumque, aperiam totam rem quisquam praesentium animi consequuntur placeat minima cupiditate reprehenderit hic dignissimos, quae aliquam quam at. Tenetur voluptatibus esse mollitia quisquam asperiores repellendus magni eligendi atque corrupti facilis, vel velit odit ducimus ab officiis minima natus eveniet quos necessitatibus, cum et enim recusandae modi. At a impedit quo nesciunt consequatur mollitia vitae eos distinctio tenetur error veniam fugiat, laudantium dolorem, reprehenderit ratione. Fugit quidem necessitatibus atque, repellat sint perspiciatis sunt, facilis expedita blanditiis placeat odit autem libero enim dicta voluptates sapiente minima. Corporis commodi ipsum deleniti distinctio dolores magni, esse quibusdam alias!
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="achievements">
+      <div class="yearEstablished achievement">
+        <h1>2023</h1>
+        <p>Year <br> Established</p>
+      </div>
+      <div class="projectCompleted achievement">
+        <h1>206</h1>
+        <p>Projects <br> Completed</p>
+      </div>
+      <div class="contractorAppointed achievement">
+        <h1>870</h1>
+        <p>Contractors <br> Appointed</p>
+      </div>
+      <div class="awardsWon achievement">
+        <h1>26</h1>
+        <p>Awards <br> Won</p>
+      </div>
+    </div>
+
+
+    <div class="projects" id="idProject">
+      <div class="projectHeading">
+        <h1>PROJECTS</h1>
+      </div>
+      <div class="projectsImage">
+        <div class="first projImage">
+          <a href=""><img class="projectImage"
+              src="https://www.theglobeandmail.com/resizer/p4fMgCMsQ8vKeUjU6GjNul_hAmQ=/600x0/filters:quality(80):format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/tgam/CIQXIPAXLJB3JPXWGXYMHKWEZM.jpg"
+              alt=""></a>
+        </div>
+        <div class="second projImage">
+          <a href=""><img class="projectImage"
+              src="https://media.istockphoto.com/photos/construction-site-view-with-tower-crane-picture-id940251778?k=20&m=940251778&s=612x612&w=0&h=bV_JpVkR4NDwsTzNffJPyhhPfmqzUTiJLi9OfodjiCY="
+              alt=""></a>
+        </div>
+        <div class="third projImage">
+          <a href=""><img class="projectImage" src="https://www.uschamber.com/assets/images/gettyimages-1267010802.jpg"
+              alt=""></a>
+        </div>
+        <div class="fourth projImage">
+          <a href=""><img class="projectImage"
+              src="https://d3cl79h6n1fe0x.cloudfront.net/wp-content/uploads/2020/01/15085115/11.jpeg" alt=""></a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="contact" id="idContact">
+
+
+      <div class="contactHeading">
+        <h1>CONTACT</h1>
+      </div>
+
+      <div class="contactDetails">
+
+        <div class="inquiries">
+          <h1>INQUIRIES</h1>
+          <p>For any inquiries, questions or commendations, <br>please call: 123-456-7890 or fill out the following form
+          </p>
+        </div>
+
+
+        <div class="headOffice">
+          <h1>HEADOFFICE</h1>
+          <p>500 Terry Francois Street
+            <br>
+            San Francisco, CA 94158
+            <br><br>
+
+
+            info@mysite.com
+            <br>
+            Tel: 123-456-7890
+            <br>
+            Fax: 123-456-7890
+            <br>
+          </p>
+        </div>
+
+
+        <div class="contactUs">
+          <h1>CONTACT US</h1>
+          <div class="contactDetails">
+            <form action="#">
+              <input type="text" class="details" placeholder="First Name"><br>
+              <input type="text" class="details" placeholder="Last Name"><br>
+              <input type="email" class="details" placeholder="Email" required><br>
+              <input type="text" class="details" placeholder="Subject"><br>
+              <textarea class="details" placeholder="Problem" name="textArea" id="" cols="30" rows="10"></textarea><br>
+              <button id="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="employment">
+          <h1>EMPLOYMENT</h1>
+          <p>To apply for a job with Sphere Constuctions, please send a cover letter together with your C.V. to:
+            nitindwivedi878@gmail.com</p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+<script>
+
+  
+
+
+  down = document.getElementById("downArrow")
+  intro = document.getElementById("entry")
+  top = document.getElementById("top")
+  services = document.getElementById('idServices')
+  about = document.getElementById("idAbout")
+  project = document.getElementById("idProject")
+  contact = document.getElementById("idContact")
+
+  function toProject() {
+    project.scrollIntoView(true)
+  }
+
+  function toAbout() {
+    about.scrollIntoView(true)
+  }
+
+  function toServies() {
+    services.scrollIntoView(true)
+  }
+
+  function moveDown() {
+    down.scrollIntoView(true)
+  }
+  function moveTop() {
+    console.log("hi");
+    intro.scrollIntoView(true)
+  }
+
+  function toContact() {
+    contact.scrollIntoView(true)
+  }
+</script>
+
+</html>

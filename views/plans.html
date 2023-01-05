@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans</title>
+
+
+  <style>
+    .container {
+      background-color: antiquewhite;
+      display: flex;
+      min-width: 100vw;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .servies {
+      margin-top: 30px;
+      display: flex;
+      max-width: 300px;
+      height: fit-content;
+      flex-wrap: wrap;
+      background-color: aqua;
+      margin-left: 50px;
+    }
+
+    #cart {
+      min-width: 100vw;
+      height: fit-content;
+      background-color: aquamarine;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .choosenOne {
+      margin: 30px 30px;
+
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button onclick="add(this)">Click it</button>
+    </div>
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button onclick="add(this)">Click it</button>
+    </div>
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button onclick="add(this)">Click it</button>
+    </div>
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button onclick="add(this)">Click it</button>
+    </div>
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button onclick="add(this)">Click it</button>
+    </div>
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button onclick="add(this)" id="hi nitin">956.23 click</button>
+    </div>
+    <div class="servies">
+      <p>elit. Quidem optio atque sit ad cum adipisci esse veniam unde explicabo. Iusto, unde. Laboriosam, itaque.
+        Tenetur amet aut ea, veritatis similique id placeat. Hic perspiciatis, doloremque obcaecati, voluptas illo eius
+        animi ut placeat provident nesciunt maiores? Esse nesciunt quas tenetur a consectetur consequuntur eligendi ab
+        similique officia veritatis? Esse cum fugit laudantium perferendis et sint ut iusto similique voluptatem. Eos,
+        dolorem, nesciunt nemo nulla minus libero debitis nihil excepturi laborum quis exercitationem non minima omnis
+        vel quos eius qui aut. Natus, expedita!</p>
+      <button  onclick="add(this)" id="last">98$ last</button>
+    </div>
+
+  </div>
+
+  <div id="cart">
+    <div class="cont">
+      <div class="choosenOne">
+
+      </div>
+    </div>
+  </div>
+  <button onclick="s()">sub</button>
+  <form action="/plansInserted" method="post">
+    <input type="hidden" name="result" id="res">
+    <input type="submit" value="submit">
+  </form>
+</body>
+
+<script>
+  let cart = document.getElementById("cart");
+  let list = [];
+  function add(e) {
+    let choosenOne = document.createElement('div');
+    choosenOne.className = "choosenOne";
+    let p = document.createElement('p');
+    p.innerText = e.innerText;
+    list.push(e.innerText);
+    choosenOne.appendChild(p);
+    cart.appendChild(choosenOne);
+  }
+  function s() {
+    let res = document.getElementById("res");
+    res.value = list;
+    // res.style.visibility = "show"
+    console.log(res.value);
+    // console.log(list);
+  }
+
+</script>
+
+</html>
